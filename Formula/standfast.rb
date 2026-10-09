@@ -16,17 +16,17 @@ class Standfast < Formula
   license "MIT"
   head "https://github.com/Perafan18/standfast.git", branch: "main"
 
-  # Matches LSMinimumSystemVersion in Resources/Info.plist. MenuBarExtra is a
-  # macOS 13 API, but the app targets 14 and there is nothing to gain from
-  # letting Homebrew install something the bundle then refuses to launch.
-  depends_on macos: :sonoma
-
   # Xcode.app, not only the Command Line Tools. From the macOS 27 SDK on,
   # SwiftUI's `@State` is a macro whose plugin (`SwiftUIMacros`) ships inside
   # Xcode.app alone; with the Command Line Tools the build fails at the first
   # `@State` with "cannot find '$…' in scope", a message that names no fix.
   # Saying so here costs the download up front instead of a failed install.
   depends_on xcode: ["16.0", :build]
+
+  # Matches LSMinimumSystemVersion in Resources/Info.plist. MenuBarExtra is a
+  # macOS 13 API, but the app targets 14 and there is nothing to gain from
+  # letting Homebrew install something the bundle then refuses to launch.
+  depends_on macos: :sonoma
 
   def install
     # The manifest declares swift-tools-version 6.0, so an older toolchain
