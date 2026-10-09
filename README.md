@@ -1,7 +1,16 @@
 # Perafan18/homebrew-tap
 
-Homebrew formulae for [Standfast](https://github.com/Perafan18/standfast), a macOS menu bar
-app for self-hosted GitHub Actions runners.
+Homebrew cask and formula for [Standfast](https://github.com/Perafan18/standfast), a macOS
+menu bar app for self-hosted GitHub Actions runners.
+
+```sh
+brew install --cask perafan18/tap/standfast
+```
+
+The cask installs the release download, signed with a Developer ID and notarized by Apple,
+into Applications.
+
+## Building from source instead
 
 ```sh
 brew install perafan18/tap/standfast
@@ -18,4 +27,4 @@ open /Applications/Standfast.app
 ```
 
 The formula's source of truth is `Formula/standfast.rb` in the Standfast repository; this
-tap carries a copy with each release's checksum.
+tap carries a copy with each release's checksum. The cask lives only here.
