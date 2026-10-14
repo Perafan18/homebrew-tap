@@ -1,6 +1,6 @@
 cask "standfast" do
-  version "0.5.0"
-  sha256 "fce06520c93634c2ca4200778867deed0616312ae0bf3ceec2684fddfd44c84d"
+  version "0.6.0"
+  sha256 "d1c3a0b9f53de9f87bc2c314770f60b42b42c284520e16a8fac6929dd69eecd0"
 
   url "https://github.com/Perafan18/standfast/releases/download/v#{version}/Standfast.zip"
   name "Standfast"
